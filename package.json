@@ -1,0 +1,20 @@
+{
+  "name": "soloproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/server/app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app",
+    "create": "webpack"
+  },
+  "proxy": "http://localhost:3000",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
