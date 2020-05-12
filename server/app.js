@@ -3,6 +3,7 @@ const app = express();
 const request = require('request');
 const bodyParser = require('body-parser'); 
 const path = require('path');
+const key = require('./key.js');
 const PORT = process.env.PORT || 3000;
 
 express.json();
@@ -52,7 +53,7 @@ app.get('/success', (req, res) => {
         url: 'https://us19.api.mailchimp.com/3.0/lists/7c945f3be0',
         method: 'POST',
         headers: {
-            Authorization: 'auth 6970cf4932f44750a45c0f1eb15bacc0-us19'
+            Authorization: `auth ${key.auth.token}`
         },
         body: postData
     }
